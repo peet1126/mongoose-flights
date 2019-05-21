@@ -6,6 +6,7 @@
         <th scope="col">Flight Number</th>
         <th scope="col">Airline</th>
         <th scope="col">Departs</th>
+        <th scope="col">airport</th>
       </tr>
     </thead>
     <tbody>
@@ -17,6 +18,7 @@
         </th>
         <td><%= flight.airline %></td>
         <td><%= flight.departs %></td>
+        <td><%= flight.airport %></td>
         <td>
           <a class="btn btn-dark" href="/flights/<%= flight._id %>">DETAILS</a>
         </td>

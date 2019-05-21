@@ -1,25 +1,56 @@
 <%- include ../partials/header %>
-<section id="show-page" >
-    <div>Title: </div>
-    <div>Airline: </div>
-    <div><%= flight.airline %></div>
-    <div>Flight Number: </div>
-    <div><%= flight.flightNo %></div>
-    <div>Departure: </div>
-    <div><%= flight.departs %></div>
-    <div>Airport: </div>
-    <div><%= flight.airport %></div>
-    <div><%= flight.destination %></div>
-    
-    <div class="form-group">Destinations:
-        <label for="airport">Destination</label>
-        <select class="form-control" name="airport">
-            <option value="AUS">AUS</option>
-            <option value="DAL">DAL</option>
-            <option value="SEA">SEA</option>
-            <option value="LAX">LAX</option>
-        </select>
-    </div>
-    
-</section>
+<table class="table table-striped table-hover table-light">
+    <thead>
+        <tr>
+            <th scope="col">Airline</th>
+            <th scope="col">Flight Number</th>
+            <th scope="col">Departs</th>
+            <th scope="col">Airport</th>
+            <th scope="col">Destination</th>
+        </tr>
+    </thead>
+    <tbody>
+        <th scope="row">
+            <%= flight.airline %>
+        </th>
+        <td><%= flight.flightNo %></td>
+        <td><%= flight.departs %></td>
+        <td><%= flight.airport %></td>
+        <td><%= flight.destination %>
+            
+        </tr>
+    </tbody>
+</table>
+<form action="/flights/:id" autocomplete="off" class="flights-form" method="POST">
+<div>
+
+    <div class="form-group">
+            <label for="airport">Origin</label>
+            <select class="form-control" name="airport">
+              <option value="AUS">AUS</option>
+              <option value="DAL">DAL</option>
+              <option value="SEA">SEA</option>
+              <option value="LAX">LAX</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark">Add Flight</button>
+</div>
+</form>
 <%- include ../partials/footer %>
+
+
+
+
+<!-- <label for="airport"></label>
+<form action="/:id" method="POST">
+<select class="form-control" name="airport">
+    <option value="AUS">AUS</option>
+    <option value="DAL">DAL</option>
+    <option value="SEA">SEA</option>
+    <option value="LAX">LAX</option>
+</select>
+</td>
+<td>
+<a class="btn btn-dark" href="/flights/<%= flight._id %>">MAKE</a>
+</td>
+</form> -->
