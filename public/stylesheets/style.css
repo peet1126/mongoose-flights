@@ -1,0 +1,32 @@
+
+body {
+  padding: 50px;
+  
+}
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  max-width: 50vmax;
+  margin: 4rem auto;
+}
+.navbar {
+  padding: .5rem 0;
+}
+.navbar-light,
+.bg-light {
+  background-color: transparent !important;
+}
+.form-group button {
+  margin-top: 2rem;
+}
+.flights-form {
+  max-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+}
